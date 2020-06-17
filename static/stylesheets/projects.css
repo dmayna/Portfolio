@@ -1,0 +1,16 @@
+body {
+  background: url("/static/img/usfca2.jpeg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
+}
+h2 ,p, td{
+  color: black;
+}
+
+.heading {
+  background-color: rgba(110,110,110,0.8);
+  margin: 3px;
+  padding: 3px;
+}

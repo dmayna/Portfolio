@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/stylesheets/projects.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <style>
+    body {
+      padding-top: 70px;
+    }
+
+    button {
+      color: white;
+    }
+
+    /* Modify the background color */
+    .navbar-custom {
+      background-color: rgba(89, 89, 89, 0.7);
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    /* Modify brand and text color */
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text,
+    .navbar-custom .nav-link {
+      color: white;
+    }
+    /* hover animations */
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .btn-primary-outline {
+      background-color: transparent;
+      border-color: #ccc;
+    }
+    .btn-primary-outline:hover {
+      opacity: 0.7;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+  <title>Projects</title>
+</head>
+
+<body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-expand-sm navbar-custom">
+    <a class="navbar-brand" href="/">Dylan Maynard</a>
+    <button class="navbar-toggler collapsed" data-toggle="collapse" data-target=#navbarMenu>
+      &#9776;
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Software
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/projects">Projects</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/resume">Resume</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/sports">Sports</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/music">Music</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="https://www.github.com/dmayna" class="nav-link fa"> <img src="/static/img/github_transparent.png" alt="Github" width="35px"></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="https://www.linkedin.com/in/dylan-maynard-2132bb138/" class="nav-link fa"> <img src="/static/img/linkedintransparent.png" alt="LinkedIn" width="35px"></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="https://www.instagram.com/dmayna" class="nav-link fa"> <img src="/static/img/instagram_transparent.png" alt="Instagram" width="35px"></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="https://twitter.com/dmayna_42" class="nav-link fa"> <img src="/static/img/twitter_transparent.png" alt="Twitter" width="35px"></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="btn btn-primary-outline btn-md nav-link" href="/contact" role="button">Contact</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <!--end of Navigation bar-->
+
+  <div class="container">
+    <div class="heading">
+  <h2>Software Projects</h2>
+  <p>I have been programming for several years now and have used many programming languages. Golang is currently one of my favorites to go to. Blockchain and Artificial intelligence gather most of my interest.</p>
+  </div>
+  <table class="table table-bordered">
+    <thead class="table-secondary">
+      <tr>
+        <th>Project Name</th>
+        <th>Technologies used</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-primary">
+        <td><a href="https://github.com/dmayna/Blockchain">Blockchain</a></td>
+        <td>Golang</td>
+        <td>A blockchain data structure implemented in golang with PoW. Includes multiples routes to start mining and view the blockchain as it grows. Demo: <div><iframe src="/static/img/blockchaindemo.mp4" width="250" height="150"></iframe></div></td>
+      </tr>
+      <tr class="table-primary">
+        <td><a href="/">This Website</a></td>
+        <td>Golang and bootstrap</td>
+        <td>This website was created using Golang for the backend</td>
+      </tr>
+      <tr class="table-warning">
+        <td><a href="https://github.com/dmayna/Merkle-Tree">Merkle Tree</a></td>
+        <td>Python</td>
+        <td>Merkle Tree data structure implemented in Python using sha512</td>
+      </tr>
+      <tr class="table-info">
+        <td><a href="https://github.com/dmayna/Trie">Trie</a></td>
+        <td>C++</td>
+        <td>Trie data structure implemented in C++ only using the standard library</td>
+      </tr>
+      <tr class="table-info">
+        <td><a href="https://github.com/dmayna/Object-Tracking">Live Video Object Tracking</a></td>
+        <td>C++, OpenCV</td>
+        <td>A live video object tracker where the user can tune HSV filters to track a single object with a crosshair. implemented using c++ and OpenCV</td>
+      </tr>
+      <tr class="table-info">
+        <td><a href="https://github.com/dmayna/Sudoku">Sudoku</a></td>
+        <td>C++</td>
+        <td>Implemented the famous game Sudoku in C++ with a terminal user interface</td>
+      </tr>
+      <tr class="table-info">
+        <td><a href="https://github.com/dmayna/SortedPriorityQueue">Sorted Priority Queue</a></td>
+        <td>C++</td>
+        <td>Sorted Priority Queue imlpemented in C++ with quicksort</td>
+      </tr>
+      <tr class="table-info">
+        <td><a href="https://github.com/dmayna/WordLadder">Word Ladder</a></td>
+        <td>C++</td>
+        <td>A word ladder that takes two words and finds the shortest path by using bfs to turn the first word to the second by changing one letter at a time but by only using real words from a dictionary ex) Love and Hive = {Love, Live, Hive}</td>
+      </tr>
+      <tr class="table-info">
+        <td><a href="https://github.com/dmayna/Base-Converter">Number Base Converter</a></td>
+        <td>C++</td>
+        <td>A program that convert numubers to and from binary,octal, decimal and hexadecimal</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<center>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 fa">
+          <a href="https://www.github.com/dmayna"> <img src="/static/img/github_transparent.png" alt="Github" width="50px"></a>
+        </div>
+        <div class="col-3 fa">
+          <a href="https://www.linkedin.com/in/dylan-maynard-2132bb138/"> <img src="/static/img/linkedintransparent.png" alt="LinkedIn" width="50px"></a>
+        </div>
+        <div class="col-3 fa">
+          <a href="https://www.instagram.com/dmayna"> <img src="/static/img/instagram_transparent.png" alt="Instagram" width="50px"></a>
+        </div>
+        <div class="col-3 fa">
+          <a href="https://twitter.com/dmayna_42"> <img src="/static/img/twitter_transparent.png" alt="Twitter" width="50px"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</center>
+
+
+</body>
+
+</html>

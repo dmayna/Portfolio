@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/stylesheets/sports.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      padding-top: 70px;
+    }
+
+    button {
+      color: white;
+    }
+
+    /* Modify the background color */
+    .navbar-custom {
+      background-color: rgba(89, 89, 89, 0.7);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 9999999;
+    }
+
+    /* Modify brand and text color */
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text,
+    .navbar-custom .nav-link {
+      color: white;
+    }
+
+    /* hover animations */
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .btn-primary-outline {
+      background-color: transparent;
+      border-color: #ccc;
+    }
+
+    .btn-primary-outline:hover {
+      opacity: 0.7;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+
+  <script>
+    $(window).scroll(function() {
+
+      // selectors
+      var $window = $(window),
+        $body = $('body'),
+        $panel = $('.panel');
+
+      // Change 33% earlier than scroll position so colour is there when you arrive.
+      var scroll = $window.scrollTop() + ($window.height() / 3);
+
+      $panel.each(function() {
+        var $this = $(this);
+
+        // if position is within range of this panel.
+        // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+        // Remember we set the scroll to 33% earlier in scroll var.
+        if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+
+          // Remove all classes on body with color-
+          $body.removeClass(function(index, css) {
+            return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
+          });
+
+          // Add class of currently active div
+          $body.addClass('color-' + $(this).data('color'));
+        }
+      });
+
+    }).scroll();
+  </script>
+
+  <title>Favorite Sports</title>
+</head>
+
+<body>
+  <!--Navigation bar-->
+  <nav class="navbar navbar-expand-sm navbar-custom">
+    <a class="navbar-brand" href="/">Dylan Maynard</a>
+    <button class="navbar-toggler collapsed" data-toggle="collapse" data-target=#navbarMenu>
+      &#9776;
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Software
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/projects">Projects</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/resume">Resume</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/sports">Sports</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/music">Music</a>
+          </div>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="https://www.github.com/dmayna" class="nav-link fa"> <img src="/static/img/github_transparent.png" alt="Github" width="35px"></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="https://www.linkedin.com/in/dylan-maynard-2132bb138/" class="nav-link fa"> <img src="/static/img/linkedintransparent.png" alt="LinkedIn" width="35px"></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="https://www.instagram.com/dmayna" class="nav-link fa"> <img src="/static/img/instagram_transparent.png" alt="Instagram" width="35px"></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="https://twitter.com/dmayna_42" class="nav-link fa"> <img src="/static/img/twitter_transparent.png" alt="Twitter" width="35px"></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="btn btn-primary-outline btn-md nav-link" href="/contact" role="button">Contact</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <!--end of Navigation bar-->
+
+
+  <div class="panel" data-color="white">
+    <div>
+      <h1>Sports</h1>
+      <p>I grew up my entire life playing sports including soccer, football, rugby and weightlifting.</p>
+      <p>Scroll to find out some of my favorite teams and thoughts of the upcoming sports season</p>
+      <p>If you have any questions my twitter is <a href="https://twitter.com/dmayna_42">@dmayna_42</a>.</p>
+    </div>
+  </div>
+  <div class="panel" data-color="black">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-8">
+          <div class="raiders">
+            <h2>The Raiders</h2>
+            <center><p>Las Vegas' new spotlight should shine bright this fall. The raiders over achieved las season with a 6-4 record 10 weeks into the season wih arguably the hardest schedule the NFL has ever seen. Sadly the
+              Raiders
+              hit a rookie wall last year and were plagued my injuries to just finish their last 6 games with a 1-5 record. The Raiders still were able to finish with a top 10 offense with no vertical threat at the wide receivers position due to
+              Antonio
+              Brown being cut days before the start of the season. Josh Jacobs had an outstanding year with over 1,100 yards usually having to work hard in crowded boxes. Darren Waller also had 90 receptions and over 1,100 yards and is an extremely
+              underrated Tight End. This year Jacobs and Waller should have plenty of more room to work with since the Raiders added Henry Ruggs III with the 12th overall pick in the 2020 draft. Ruggs ran a blazing 4.27 and is now Jon Gruden's
+              version of
+              Tyreek Hill. This upgrade will benefit our offense entirely but I think the most importnt thing the Raiders did this offseason was address the defense, our linebacker core in Specifically. This is the first time in decades that the
+              Raiders
+              will have two stud linebackers who can cover.We're building a culture with the Raiders and Mike Mayock will prove again he is the best day 3 drafter in the league. </p></center>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <center><img src="/static/img/raiders.jpg" alt="Raiders" width="100%"></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-color="indigo">
+    <div class="container">
+      <div class="row text-center">
+          <div class="col-md-8">
+          <div class="raiders">
+
+            <h2>Los Angeles Lakers</h2>
+            <center><p>The Los Angeles lakers are great again since Kobe's departure and it's terrible he wasn't able to see this season finish out and the see future direction of the Organization. That being said, basketball was never my favorite sport, but
+              Kobe Bryant was always my favorite athlete becuase he made the athlete in me always dig a little deeper. The acquisition of Lebron two years ago immediately made the Lakers a contender and it was sad not seeing them make the playoffs
+              lst
+              year due to Lebron's injury on Christmas and all of the trade rumors. Thus year was different, Lebron attracted the talent and we received great new players in free ageny and trade including Anthony Davis and Danny Green. The pick and
+              roll
+              with Lebron and Davis is nearly unstopable especially with a knock down shooter like Danny Green waiting to be left open.</p></center>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <center><img src="/static/img/lakers.jpg" alt="Lakers" width="100%"></center>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  <div class="panel" data-color="red">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-8">
+          <div class="raiders">
+            <h2>My current P4P Boxing List</h2>
+            <center>
+            <ol>
+              <div class="list">
+                <li> Vasily Lomachenko</li>
+                <li> Canelo Alvarez</li>
+                <li> Terrance Crawford</li>
+                <li> Errol Spence</li>
+                <li> Tyson Fury</li>
+              </div>
+            </ol>
+            <h2>My all time P4P Boxing List</h2>
+            <ol>
+              <div class="list">
+                <li> Floyd Mayweather</li>
+                <li> Muhammad Ali</li>
+                <li> Mike Tyson</li>
+                <li> Sugar Ray Leonard</li>
+                <li> Manny Pacquiao</li>
+              </div>
+            </ol>
+            <center>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <center><img src="/static/img/ali.jpg" alt="Ali" width="100%"></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <center>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 fa">
+            <a href="https://www.github.com/dmayna"> <img src="/static/img/github_transparent.png" alt="Github" width="50px"></a>
+          </div>
+          <div class="col-3 fa">
+            <a href="https://www.linkedin.com/in/dylan-maynard-2132bb138/"> <img src="/static/img/linkedintransparent.png" alt="LinkedIn" width="50px"></a>
+          </div>
+          <div class="col-3 fa">
+            <a href="https://www.instagram.com/dmayna"> <img src="/static/img/instagram_transparent.png" alt="Instagram" width="50px"></a>
+          </div>
+          <div class="col-3 fa">
+            <a href="https://twitter.com/dmayna_42"> <img src="/static/img/twitter_transparent.png" alt="Twitter" width="50px"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </center>
+</body>
+
+</html>

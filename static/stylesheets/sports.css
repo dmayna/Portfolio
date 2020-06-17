@@ -1,0 +1,62 @@
+/* Setting fade transition and default settings */
+body {
+  color: #000;
+  background-color: #f4f4f4;
+  transition: background-color 1s ease;
+}
+
+/* panel styles */
+.panel {
+  /* min height incase content is higher than window height */
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+
+}
+
+.raiders {
+  color: white;
+  background-color: rgba(89, 89, 89, 0.3);
+  margin: 15px;
+  padding: 5px;
+}
+
+.list {
+  max-width: 30em;
+  margin-bottom: 1.618em;
+  font-size: 115%;
+  line-height: 1.618;
+}
+
+/* colours */
+.color-black {
+  background-color: #050505;
+}
+.color-indigo {
+  background-color: #d303fc;
+}
+.color-red {
+  background-color: #9c1111;
+}
+
+/* styling for demo, can ignore */
+body {
+  text-align: center;
+
+}
+h1, h2 {
+  font-size: 3em;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+p {
+  max-width: 30em;
+  margin-bottom: 1.618em;
+  font-size: 105%;
+  line-height: 1.618;
+}
+a {
+  color: #4332CF;
+}
