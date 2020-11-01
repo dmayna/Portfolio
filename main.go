@@ -4,12 +4,14 @@ import (
 	"fmt"
 	"net/http"
 	"uri"
+	"os"
 )
 
 //Go application entrypoint
 func main() {
-	fmt.Println("Listening on port " + uri.PORT)
+	port := os.Getenv("PORT")
+	fmt.Println("Listening on port " + port)
 
 	router := uri.NewRouter()
-	fmt.Println(http.ListenAndServe(uri.PORT, router))
+	fmt.Println(http.ListenAndServe(port, router))
 }
