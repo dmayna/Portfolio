@@ -1,8 +1,8 @@
 package node
 
 import (
-	"Portfolio/blockchain"
-	"Portfolio/blockchain/block"
+	"Portfolio/src/blockchain"
+	"Portfolio/src/blockchain/block"
 	"crypto/sha256"
 	"crypto/sha512"
 	"Portfolio/src/data"
