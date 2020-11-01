@@ -1,7 +1,7 @@
 package data
 
 import (
-	"blockchain"
+	"Portfolio/src/blockchain"
 )
 
 type HeartBeatData struct {

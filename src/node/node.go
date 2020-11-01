@@ -1,11 +1,11 @@
 package node
 
 import (
-	"blockchain"
-	"blockchain/block"
+	"Portfolio/blockchain"
+	"Portfolio/blockchain/block"
 	"crypto/sha256"
 	"crypto/sha512"
-	"data"
+	"Portfolio/src/data"
 	"encoding/hex"
 	"fmt"
 	"strconv"

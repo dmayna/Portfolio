@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"sort"
 
-	"blockchain/block"
+	"Portfolio/src/blockchain/block"
 
 	"github.com/davecgh/go-spew/spew"
 )

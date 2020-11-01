@@ -3,7 +3,7 @@ package uri
 import (
 	"net/http"
 
-	"Portfolio/uri/handlers"
+	"Portfolio/src/uri/handlers"
 )
 
 type Route struct {
