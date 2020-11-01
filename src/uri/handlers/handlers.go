@@ -5,7 +5,7 @@ import (
 	"Portfolio/src/data"
 	"html/template"
 	"net/http"
-	"node"
+	"Portfolio/src/node"
 )
 
 type Data struct {
