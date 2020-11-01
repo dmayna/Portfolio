@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"blockchain"
-	"data"
+	"Portfolio/src/blockchain"
+	"Portfolio/src/data"
 	"html/template"
 	"net/http"
 	"node"
