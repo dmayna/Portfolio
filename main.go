@@ -9,7 +9,7 @@ import (
 
 //Go application entrypoint
 func main() {
-	port := os.Getenv("PORT")
+	port :=  ":" + os.Getenv("PORT")
 	fmt.Println("Listening on port " + port)
 
 	router := uri.NewRouter()
