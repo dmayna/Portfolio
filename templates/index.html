@@ -47,6 +47,58 @@
       opacity: 0.7;
       background-color: rgba(0, 0, 0, 0.5);
     }
+
+    .title {
+      opacity: 0.7;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+
+
+    @media (max-width:999px){
+        .selfie img {
+            width: 75%;
+        }
+        .summary p {
+          margin-left: 4%;
+          margin-right: 4%;
+          padding-left: 2%;
+          padding-right: 2%;
+          font-size: 13px;
+          margin-bottom: 40px;
+        }
+      }
+
+    @media (max-width:450px){
+        .selfie img {
+            width: 85%;
+        }
+        .summary p {
+          margin-left: 6%;
+          margin-right: 6%;
+          padding-left: 2%;
+          padding-right: 2%;
+          font-size: 15px;
+          margin-bottom: 45px;
+        }
+    }
+    @media (min-width:1000px){
+      .selfie img {
+          width: 40%;
+      }
+      .summary p {
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 17px;
+        margin-bottom: 75px;
+      }
+    }
+
+    .navbar {
+      z-index: 500;
+    }
   </style>
 
   <title>Dylan Maynard Software Engineer</title>
@@ -121,14 +173,20 @@
 
   <center>
     <div class="container-fluid">
-      <h1>Dylan Maynard <small class="text-muted">Software Engineer</small> </h1>
+      <div class="title">
+        <h1>Dylan Maynard <small class="text-muted">Software Engineer</small> </h1>
+      </div>
     </div>
-    <img src="/static/img/dylan.jpg" alt="Dylan" width="35%">
+    <div class="selfie">
+      <img src="/static/img/guccibeachC.jpeg" alt="Dylan">
+    </div>
     <div class="container-fluid">
+      <div class="summary">
     <p class="lead">Educated, self taught and experienced software engineer. Currently a senior at the University of San Francisco majoring in Computer Science with a major gpa of <strong>4.0</strong> (expected graduation May 2021). I have several years of experience in interships working for one of the first companies in the FinTech industry at <a href="https://www.yodlee.com" class="test">Envestnet Yodlee. </a>I was born and raised in the Bay Area and love being surrounded by the fabulous oppurtunities that Sillicon Valley offers. Please take a look around my page to find my projects/resume or to learn more about my interests.
       <u><strong>School courses include:</strong></u> Blockchain (projects implemented in golang), Programming Languages and Paradigms, C and Systems Programming, Data Structures in C++, Data Science with R, Database management with MySQL, OOP in C++.
       <u><strong>Upcoming course work in final year:</strong></u> Software Development, System Architecture, Operating Systems and Senior Project.
     </p>
+    </div>
   </div>
   </center>
 

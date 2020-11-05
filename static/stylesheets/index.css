@@ -18,13 +18,8 @@ p {
   font-family: Helvetica, sans-serif;
   color: white;
   background: rgba(89, 89, 89, 0.7);
-  padding-left: 2%;
-  padding-right: 2%;
   border: 2px black;
   margin-top: 15px;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 75px;
 }
 
 h1 {

@@ -53,6 +53,17 @@
         background-color: rgba(0, 0, 0, 0.5);
         color: #4557ff;
       }
+
+      .text {
+        background-color: rgba(89, 89, 89, 0.8);
+        margin: 10px;
+      }
+
+      .text:hover {
+        border-color: #4557ff;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #4557ff;
+      }
     </style>
 
     <title>Dylan's Blockchain</title>
@@ -126,6 +137,12 @@
     <!--end of Navigation bar-->
 
     <div class="container-fluid">
+      <div class="text">
+        <center><p><span style="color:white"> Refresh about every 10-30 seconds to see a new block added to the chain after you start mining!</span></p>
+        <p><span style="color:white"> Blockchanin uses Proof of Work with a dificulty currently set to 3 using SHA 256}</span></p>
+        <p><span style="color:white"> More functionality cooming soon...</span></p></center>
+      </div>
+
       <a class="btn btn-primary-outline btn-sm nav-link" href="/start" role="button"><strong>Start Minig!</strong></a>
       {{ range $height, $blocks := .Bc.Chain }}
       <div class="block">
@@ -134,7 +151,7 @@
 
         <ul>
           <li>Hash: <span style="color:white">{{ $block.Header.Hash }}</span></li>
-          <li>Timestamp: <span style="color:white">{{ $block.Header.Timestamp }}</span></li>
+          <li>Timestamp: <span display="inline-block" style="color:white">{{ $block.Header.Timestamp }}</span></li>
           <li>ParentHash: <span style="color:white">{{ $block.Header.ParentHash }}</span></li>
           <li>Size: <span style="color:white">{{ $block.Header.Size }}</span></li>
           <li>Nonce: <span style="color:white">{{ $block.Header.Nonce }}</span></li>
